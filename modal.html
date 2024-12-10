@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Modal</title>
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <h1 id="bienvenido"></h1>
+
+    <button id="openModal" class="btn-primary">New User 👤</button>
+    <button id="exitModal" class="btn-exit">Exit</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Fill the Form</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              id="age"
+              placeholder="Enter your age"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              placeholder="Enter your city"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">address:</label>
+            <input
+              type="text"
+              id="address"
+              placeholder="Enter your address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required />
+          </div>
+          <div class="form-actions">
+            <input
+              type="button"
+              onclick=" Registrousuario()"
+              value="Iniciar Sesión"
+              class="btn-green"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <h2></h2>
+    <table id="userTable" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>E-mail</th>
+          <th>Number</th>
+          <th>Address</th>
+          <th>Start Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody">
+        <!-- Las filas se agregarán aquí dinámicamente -->
+      </tbody>
+    </table>
+
+    <script src="modal.js"></script>
+    <script src="user.js"></script>
+  </body>
+</html>
